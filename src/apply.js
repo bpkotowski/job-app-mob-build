@@ -59,5 +59,12 @@ formNode.addEventListener('submit', function(event) {
         snoreType: snoreSelections,
         salary: salaryNode.value
     };
-    console.log(applicant);
+    
+    const serialize = JSON.stringify(applicant);
+    window.localStorage.setItem('applicant', serialize);
+    //console.log(serialize);
+    window.location = './applicant-details.html';
+
+
 });
+
